@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>alei</groupId>
+  <artifactId>dubbo-alei-api</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>dubbo-alei-api</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <alei-common.version>0.0.1-SNAPSHOT</alei-common.version>
+    <alei-common-core.version>0.0.1-SNAPSHOT</alei-common-core.version>
+    <alei-user-api.version>0.0.1-SNAPSHOT</alei-user-api.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <!-- 为了保证各个系统依赖版本统一 添加一些配置所有版本默认已父模块定义为准 -->
+  <dependencyManagement>
+	<dependencies>
+	    <dependency>
+	    	<groupId>alei</groupId>
+	    	<artifactId>alei-common</artifactId>
+	    	<version>${alei-common.version}</version>
+	    </dependency>
+	    <dependency>
+	    	<groupId>alei</groupId>
+	    	<artifactId>alei-common-core</artifactId>
+	    	<version>${alei-common-core.version}</version>
+	    </dependency>
+	    <dependency>
+	    	<groupId>alei</groupId>
+	    	<artifactId>alei-user-api</artifactId>
+	    	<version>${alei-user-api.version}</version>
+	    </dependency>	    	    		
+	</dependencies>  	
+  </dependencyManagement>
+  <modules>
+    <module>alei-user-api</module>
+    <module>alei-common</module>
+    <module>alei-common-core</module>
+    <module>alei-user-service</module>
+    <module>dubbo-consumer-test</module>
+  </modules>
+</project>
