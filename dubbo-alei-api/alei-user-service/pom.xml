@@ -53,7 +53,7 @@
                     <configuration>
                         <transformers>
                             <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                <mainClass>com.ivan.dubbo.server.ServerMain</mainClass>
+                                <mainClass>com.alei.user.server.ServerMain</mainClass>
                             </transformer>
                             <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                 <resource>META-INF/spring.handlers</resource>

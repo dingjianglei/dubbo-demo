@@ -16,7 +16,7 @@
   <dependencies>
     <dependency>
       <groupId>alei</groupId>
-      <artifactId>alei-user-service</artifactId>
+      <artifactId>alei-user-api</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
